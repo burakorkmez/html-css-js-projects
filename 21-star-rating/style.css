@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 1.4rem;
+}
+
+.rating-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  position: relative;
+}
+
+h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.stars-container {
+  margin-bottom: 2rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 2.5rem;
+  color: #d1d6db;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star.hover,
+.star.active {
+  color: #f59e0b;
+}
+
+.rating-text {
+  color: #666666;
+  font-size: 0.9rem;
+  min-height: 22px;
+}
+
+.rating-text.selected {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.submit-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.submit-btn:disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.thank-you {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.thank-you.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.check-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you p {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .rating-card {
+    padding: 32px 24px;
+  }
+
+  .star {
+    font-size: 2rem;
+  }
+}

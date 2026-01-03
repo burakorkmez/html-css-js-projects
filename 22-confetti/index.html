@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confetti Explosion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="formCard">
+        <h2>Join Our Newsletter</h2>
+        <p>Get weekly updates straight to your inbox</p>
+
+        <form id="signupForm">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="card success-card hidden" id="successCard">
+        <div class="success-icon">🎉</div>
+        <h2>You're In!</h2>
+        <p>Thanks for subscribing. Check your inbox!</p>
+        <button class="reset-btn" id="resetBtn">Subscribe Another</button>
+      </div>
+    </div>
+  </body>
+</html>

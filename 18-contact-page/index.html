@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <!-- LEFT SIDE - INFO SECTION -->
+      <section class="info-section">
+        <div class="info-content">
+          <span class="badge">Contact</span>
+          <h1>Let's work together</h1>
+          <p>
+            Have a project in mind? We'd love to hear from you. Send us a message and we'll respond
+            as soon as possible.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div class="card-info">
+                <span class="card-label">Email</span>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+
+              <div class="card-info">
+                <span class="card-label">Phone</span>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div class="card-info">
+                <span class="card-label">Office</span>
+                <span>123 Street, San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials">
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT SIDE - FORM SECTION -->
+      <section class="form-section">
+        <form class="contact-form" id="contact-form">
+          <h2>Send a message</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" placeholder="Doe" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject">
+              <option value="" selected disabled>Select a topic</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="sales">Sales Question</option>
+              <option value="partnership">Partnership</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Tell us about your project..."
+              required
+              rows="5"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-state hidden" id="success">
+          <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+
+          <h2>Message sent!</h2>
+          <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          <button class="reset-btn" id="reset-btn">Send another message</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
