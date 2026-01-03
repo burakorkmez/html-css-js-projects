@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.quote-card {
+  background: #181818;
+  padding: 48px 44px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border: 1px solid #282828;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: #1db954;
+  font-family: Georgia, serif;
+  margin-bottom: -10px;
+}
+
+.quote-text {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  min-height: 80px;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  font-weight: 500;
+  margin-bottom: 36px;
+  min-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #727272;
+}
+
+.copy-btn:hover {
+  border-color: #fff;
+  transform: scale(1.02);
+}
+
+.new-btn {
+  background-color: #1db954;
+  color: #000;
+}
+
+.new-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.04);
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    padding: 36px 24px;
+  }
+
+  .quote-text {
+    font-size: 1.15rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
