@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.page p {
+  margin-bottom: 24px;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  border-color: #1a1a1a;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 500px;
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.cookie-content {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cookie-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.cookie-text h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cookie-text p {
+  color: #999;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+  color: #e2e8f0;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  .cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 20px;
+  }
+
+  .cookie-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cookie-actions {
+    flex-direction: column;
+  }
+}
