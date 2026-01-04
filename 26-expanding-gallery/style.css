@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+}
+
+.panel {
+  flex: 0.5;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: flex 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.panel.active {
+  flex: 4;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    height: 500px;
+    max-width: 500px;
+  }
+
+  .panel h3 {
+    bottom: 16px;
+    left: 16px;
+    font-size: 1rem;
+  }
+}
