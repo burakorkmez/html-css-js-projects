@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Meter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>Create Account</h2>
+        <p class="subtitle">Join us today</p>
+
+        <form id="signupForm">
+          <div class="row">
+            <div class="input-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="John" />
+            </div>
+            <div class="input-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@gmail.com" />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Create password" />
+              <button type="button" class="toggle-btn" id="toggleBtn">👁️</button>
+            </div>
+          </div>
+
+          <div class="strength-meter">
+            <div class="strength-bar" id="strengthBar"></div>
+          </div>
+
+          <p class="strength-text" id="strengthText">Password strength</p>
+
+          <ul class="requirements">
+            <li id="length">8+ characters</li>
+            <li id="lowercase">Lowercase</li>
+            <li id="uppercase">Uppercase</li>
+            <li id="number">Number</li>
+            <li id="special">Special char</li>
+          </ul>
+
+          <button type="submit" class="submit-btn">Create Account</button>
+        </form>
+
+        <p class="footer">Already have an account? <a href="#">Sign in</a></p>
+      </div>
+    </div>
+  </body>
+</html>
