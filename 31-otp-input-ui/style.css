@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.otp-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.otp-input {
+  width: 56px;
+  height: 64px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+.otp-input:focus {
+  border-color: #ff8c42;
+  box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.2);
+}
+
+.btn-resend {
+  background: none;
+  border: none;
+  color: #ff8c42;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btn-resend:hover {
+  background: #fff5f0;
+}
+
+.feedback-ui {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(255, 140, 66, 0.3);
+}
+
+.feedback-ui h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.feedback-message {
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.btn-continue {
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
+  transition: all 0.3s;
+}
+
+.btn-continue:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .otp-input {
+    width: 48px;
+    height: 56px;
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Input UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Enter Verification Code</h1>
+        <p class="subtitle">We've sent a 6-digit code to your device</p>
+
+        <div class="otp-container">
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+          <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+        </div>
+
+        <button class="btn-resend" id="resend-btn">Resend Code</button>
+
+        <!-- feedback UI (shown when code is complete) -->
+        <div class="feedback-ui hidden" id="feedback-ui">
+          <div class="success-icon">✓</div>
+          <h2>Code Verified!</h2>
+          <p class="feedback-message">Your verification code has been successfully verified.</p>
+          <button class="btn-continue" id="continue-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
