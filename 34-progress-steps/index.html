@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Multi-Step Form</h1>
+        <p class="subtitle">Complete all steps to finish</p>
+
+        <!-- PROGRESS STEPS -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+          <div class="steps">
+            <div class="step active">
+              <div class="step-circle">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="step-label">Account</div>
+            </div>
+
+            <div class="step">
+              <div class="step-circle">
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+              <div class="step-label">Details</div>
+            </div>
+
+            <div class="step">
+              <div class="step-circle">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <div class="step-label">Payment</div>
+            </div>
+
+            <div class="step">
+              <div class="step-circle">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="step-label">Review</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM STEPS -->
+        <div class="form-container">
+          <div class="form-step active">
+            <h2>Create Account</h2>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password" />
+            </div>
+          </div>
+
+          <div class="form-step">
+            <h2>Personal Details</h2>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(555) 123-4567" />
+            </div>
+          </div>
+
+          <div class="form-step">
+            <h2>Payment Information</h2>
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" placeholder="1234 5678 9012 3456" />
+            </div>
+            <div class="form-group">
+              <label>Expiry Date</label>
+              <input type="text" placeholder="MM/YY" />
+            </div>
+          </div>
+
+          <div class="form-step">
+            <h2>Review & Confirm</h2>
+            <div class="review-card">
+              <p>Please review your information before submitting.</p>
+              <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVIGATION BTNS -->
+        <div class="buttons">
+          <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+          <button class="btn btn-primary" id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
