@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  color: #f1f5f9;
+  transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #3b82f6;
+}
+
+textarea::placeholder {
+  color: #64748b;
+}
+
+.options {
+  margin-bottom: 24px;
+}
+
+.option-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+select {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  outline: none;
+  background: #0f172a;
+  color: #f1f5f9;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+select:focus {
+  border-color: #3b82f6;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  margin-bottom: 32px;
+}
+
+.generate-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+}
+
+.qr-section {
+  display: none;
+  text-align: center;
+}
+
+.qr-section.show {
+  display: block;
+}
+
+.qr-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  background: #334155;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #475569;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
