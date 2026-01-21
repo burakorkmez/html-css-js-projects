@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cart-header">
+        <h1>Shopping Cart</h1>
+        <span class="item-count" id="itemCount">3 items</span>
+      </div>
+
+      <div class="empty-cart" id="emptyCart" style="display: none">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Your cart is empty</p>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <!-- 1st item -->
+        <div class="cart-item">
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+            alt="Wireless Headphones"
+          />
+          <div class="item-info">
+            <h3>Wireless Headphones</h3>
+            <p class="item-price">$99.99</p>
+          </div>
+
+          <div class="quantity-controls">
+            <button class="qty-btn" data-action="decrease">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <span class="quantity">1</span>
+            <button class="qty-btn" data-action="increase">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="item-total">$99.99</div>
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- 2nd item -->
+
+        <div class="cart-item">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop"
+            alt="Smart Watch"
+          />
+          <div class="item-info">
+            <h3>Smart Watch</h3>
+            <p class="item-price">$199.99</p>
+          </div>
+          <div class="quantity-controls">
+            <button class="qty-btn" data-action="decrease">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span class="quantity">2</span>
+            <button class="qty-btn" data-action="increase">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <div class="item-total">$399.98</div>
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- 3rd item -->
+        <div class="cart-item">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop"
+            alt="Shoes"
+          />
+          <div class="item-info">
+            <h3>Shoes</h3>
+            <p class="item-price">$19.99</p>
+          </div>
+          <div class="quantity-controls">
+            <button class="qty-btn" data-action="decrease">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span class="quantity">1</span>
+            <button class="qty-btn" data-action="increase">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <div class="item-total">$19.99</div>
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">$519.96</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>$10.00</span>
+        </div>
+
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="total">$529.96</span>
+        </div>
+
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </body>
+</html>
