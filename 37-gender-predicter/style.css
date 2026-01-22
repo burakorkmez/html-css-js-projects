@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  color: #ff8c42;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #f1f5f9;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #ff8c42;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+button {
+  padding: 14px 32px;
+  background: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ff6b35;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-content {
+  width: 100%;
+}
+
+.gender-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.gender-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 12px;
+}
+
+.probability {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.count {
+  font-size: 14px;
+  color: #64748b;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

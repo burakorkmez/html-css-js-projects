@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Predictor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Gender Predictor</h1>
+        <p class="subtitle">Enter a name to predict the gender</p>
+
+        <div class="input-section">
+          <input type="text" id="nameInput" placeholder="Enter a name..." autofocus />
+          <button id="predictBtn">Predict</button>
+        </div>
+
+        <div class="result" id="result">
+          <div class="result-content">
+            <div class="gender-icon" id="genderIcon">👤</div>
+            <div class="gender-text" id="genderText">Enter a name above</div>
+            <div class="probability" id="probability"></div>
+            <div class="count" id="count"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
