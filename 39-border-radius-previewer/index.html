@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Radius Previewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Border Radius Preview</h1>
+        <p class="subtitle">Adjust the slider to see the border radius in action</p>
+
+        <div class="preview-section">
+          <div class="preview-box" id="previewBox"></div>
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <label for="radiusSlider">
+              <span>Border Radius</span>
+              <span class="value" id="radiusValue">0px</span>
+            </label>
+
+            <input type="range" id="radiusSlider" min="0" max="100" value="0" />
+          </div>
+        </div>
+
+        <div class="code-output">
+          <label>CSS Code</label>
+          <div class="code-box">
+            <code id="cssCode">border-radius: 0px;</code>
+            <button class="copy-btn" id="copyBtn">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
