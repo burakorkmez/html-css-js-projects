@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Box Shadow Generator</h1>
+        <p class="subtitle">Adjust the controls to create your perfect shadow</p>
+
+        <div class="preview-section">
+          <div class="preview-box" id="previewBox"></div>
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <label for="offsetX">
+              <span>Offset X</span>
+              <span class="value" id="offsetXValue">0px</span>
+            </label>
+
+            <input type="range" id="offsetX" min="-50" max="50" value="0" />
+          </div>
+
+          <div class="control-group">
+            <label for="offsetY">
+              <span>Offset Y</span>
+              <span class="value" id="offsetYValue">0px</span>
+            </label>
+
+            <input type="range" id="offsetY" min="-50" max="50" value="0" />
+          </div>
+
+          <div class="control-group">
+            <label for="blur">
+              <span>Blur</span>
+              <span class="value" id="blurValue">0px</span>
+            </label>
+
+            <input type="range" id="blur" min="0" max="50" value="0" />
+          </div>
+
+          <div class="control-group">
+            <label for="spread">
+              <span>Spread</span>
+              <span class="value" id="spreadValue">0px</span>
+            </label>
+            <input type="range" id="spread" min="-20" max="20" value="0" />
+          </div>
+
+          <div class="control-group">
+            <label for="opacity">
+              <span>Opacity</span>
+              <span class="value" id="opacityValue">0.5</span>
+            </label>
+            <input type="range" id="opacity" min="0" max="100" value="50" />
+          </div>
+        </div>
+
+        <div class="code-output">
+          <label>CSS Code</label>
+          <div class="code-box">
+            <code id="cssCode">box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);</code>
+            <button class="copy-btn" id="copyBtn">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
