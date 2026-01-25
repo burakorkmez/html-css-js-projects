@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Formatter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-form">
+        <h2>Payment Details</h2>
+
+        <form id="paymentForm">
+          <div class="input-group">
+            <label for="cardNumber">Card Number</label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-credit-card"></i>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="1234 5678 8901 1234"
+                maxlength="19"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <label for="expiry">Expiry Date</label>
+              <input
+                type="text"
+                id="expiry"
+                placeholder="MM / YY"
+                maxlength="7"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" placeholder="John Doe" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="submit-btn">Pay Now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- success modal -->
+    <div class="modal-overlay hidden" id="successModal">
+      <div class="modal">
+        <div class="modal-icon">✓</div>
+        <h3>Payment Successul!</h3>
+        <p>Your payment has been processed.</p>
+        <button class="modal-btn" id="closeModal">Done</button>
+      </div>
+    </div>
+  </body>
+</html>
