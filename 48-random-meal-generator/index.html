@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Meal Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍽️ Random Meal</h1>
+      <p class="subtitle">Don't know what to eat? Let us decide!</p>
+
+      <button class="generate-btn" id="generateBtn">Get Random Meal</button>
+
+      <div class="meal-card hidden" id="mealCard">
+        <img src="" id="mealImg" alt="Meal" />
+        <h2 id="mealName"></h2>
+        <div class="meal-meta">
+          <span class="badge" id="mealCategory"></span>
+          <span class="badge" id="mealArea"></span>
+        </div>
+
+        <p class="instructions" id="mealInstructions"></p>
+        <a href="" target="_blank" id="youtubeLink" class="youtube-btn hidden"> 👉 Watch Recipe </a>
+      </div>
+    </div>
+  </body>
+</html>
