@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokémon Viewer</h1>
+      <p class="subtitle">Search for any Pokémon</p>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Enter Pokémon name or ID (1-1025)" />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <button class="random-btn" id="randomBtn">🎲 Random Pokémon</button>
+
+      <div class="suggestions">
+        <span class="suggestion-label">Try:</span>
+        <button class="suggestion" data-name="charizard">Charizard</button>
+        <button class="suggestion" data-name="mewtwo">Mewtwo</button>
+        <button class="suggestion" data-name="eevee">Eevee</button>
+        <button class="suggestion" data-name="gengar">Gengar</button>
+        <button class="suggestion" data-name="snorlax">Snorlax</button>
+      </div>
+
+      <div class="pokemon-card hidden" id="pokemonCard">
+        <img id="pokemonImg" src="" alt="Pokemon" />
+        <h2 id="pokemonName"></h2>
+        <div class="pokemon-id" id="pokemonId"></div>
+        <div class="types" id="pokemonTypes"></div>
+        <div class="stats" id="pokemonStats"></div>
+      </div>
+
+      <div class="error hidden" id="error">Pokemon not found. Try again</div>
+    </div>
+  </body>
+</html>
