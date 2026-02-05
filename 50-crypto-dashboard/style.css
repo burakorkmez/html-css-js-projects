@@ -1,0 +1,139 @@
+:root {
+  --bg: #0d0d0d;
+  --card: #1a1a1a;
+  --card-hover: #222;
+  --border: rgba(232, 165, 75, 0.15);
+  --orange: #e8a54b;
+  --orange-soft: rgba(232, 165, 75, 0.2);
+  --text: #f0ebe3;
+  --text-muted: #8b8680;
+  --up: #34d399;
+  --down: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.coins {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.coin:hover {
+  background: var(--card-hover);
+  border-color: rgba(232, 165, 75, 0.25);
+}
+
+.coin-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--orange-soft);
+}
+
+.coin-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.coin-info {
+  flex: 1;
+}
+
+.coin-name {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.coin-symbol {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.coin-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.coin-change {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+
+.coin-change.up {
+  color: var(--up);
+}
+
+.coin-change.down {
+  color: var(--down);
+}
+
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 32px;
+  font-size: 16px;
+}
+
+.footnote {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 20px;
+}
