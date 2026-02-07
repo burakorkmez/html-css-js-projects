@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.leaderboard {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #111;
+  border-radius: 16px;
+  border: 1px solid #1a1a1a;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.period {
+  font-size: 0.8rem;
+  color: #666;
+  padding: 6px 12px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 24px;
+  transition: background-color 0.2s;
+}
+
+.item:hover {
+  background-color: #161616;
+}
+
+.rank {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.rank-1 .rank {
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  color: #000;
+}
+
+.rank-2 .rank {
+  background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+  color: #000;
+}
+
+.rank-3 .rank {
+  background: linear-gradient(135deg, #cd7f32, #b5651d);
+  color: #000;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rank-1 .avatar {
+  border: 2px solid #ffd700;
+}
+
+.rank-2 .avatar {
+  border: 2px solid #c0c0c0;
+}
+
+.rank-3 .avatar {
+  border: 2px solid #cd7f32;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.username {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.rank-1 .score {
+  color: #ffd700;
+}
+
+.rank-2 .score {
+  color: #c0c0c0;
+}
+
+.rank-3 .score {
+  color: #cd7f32;
+}
