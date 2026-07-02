@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Left Panel: Timer & Notes -->
+        <div class="panel-left">
+            <!-- Timer Card -->
+            <div class="card p-3 mb-3 text-center">
+                <div class="card-title text-muted text-uppercase small font-weight-bold">Focus Timer</div>
+                <div class="timer-display" id="timer">25:00</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-primary btn-sm" id="startBtn">
+                        <i class="bi bi-play-fill"></i> Start
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm" id="resetBtn">
+                        <i class="bi bi-arrow-counterclockwise"></i> Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Note Card -->
+            <div class="card p-3 flex-grow-1 d-flex flex-column">
+                <div class="card-title text-muted text-uppercase small font-weight-bold mb-2">Quick Notes</div>
+                <textarea class="form-control text-textarea" id="quickNote" placeholder="Type your thoughts here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Right Panel: Task List -->
+        <div class="panel-right card p-3 d-flex flex-column">
+            <div class="card-title text-muted text-uppercase small font-weight-bold mb-3">Today's Tasks</div>
+            
+            <!-- Add Task Form -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="taskInput" placeholder="Add a new task...">
+                <button class="btn btn-primary" id="addTaskBtn">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+
+            <!-- Task List (Max 4 items) -->
+            <ul class="task-list" id="taskList">
+                <!-- Dynamically filled by JS -->
+            </ul>
+            
+            <div class="text-muted small text-center mt-auto">
+                Maximum 4 active tasks allowed to fit the screen.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
