@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
+    <title>Pixel Todo App</title>
+    <link rel="icon" type="image/png" href="todo.png" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,54 +13,70 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="app">
       <header>
-        <h1>
-          <i class="fas fa-check-circle"></i>
-          My Tasks
-        </h1>
+        <div class="header-top">
+          <h1>
+            <i class="fas fa-gamepad"></i>
+            QUEST LOG
+          </h1>
+          <div class="header-controls">
+            <button
+              id="palette-toggle"
+              class="pixel-btn"
+              title="Change Color Palette"
+            >
+              <i class="fas fa-palette"></i>
+            </button>
+            <button
+              id="theme-toggle"
+              class="pixel-btn"
+              title="Toggle Light/Dark"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
         <p id="date"></p>
       </header>
 
       <div class="todo-input">
-        <input type="text" id="task-input" placeholder="What do you need to do?" />
-        <button id="add-task">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="ENTER NEW QUEST..."
+          autocomplete="off"
+        />
+        <button id="add-task" class="pixel-btn">
           <i class="fas fa-plus"></i>
         </button>
       </div>
 
       <div class="filters">
-        <span class="filter active" data-filter="all"> All </span>
-        <span class="filter" data-filter="active"> Active </span>
-        <span class="filter" data-filter="completed"> Completed </span>
+        <span class="filter active" data-filter="all"> ALL </span>
+        <span class="filter" data-filter="active"> ACTIVE </span>
+        <span class="filter" data-filter="completed"> DONE </span>
       </div>
 
       <div class="todos-container">
-        <ul id="todos-list">
-          <!-- li will be inserted right here later in the video -->
-          <!-- <li class="todo-item">
-            <label class="checkbox-container">
-              <input type="checkbox" class="todo-checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <span class="todo-item-text">Buy groceries</span>
-            <button class="delete-btn"><i class="fas fa-times"></i></button>
-          </li> -->
-        </ul>
+        <ul id="todos-list"></ul>
         <div class="empty-state hidden">
-          <i class="fas fa-clipboard-list"></i>
-          <p>No tasks here yet</p>
+          <i class="fas fa-ghost"></i>
+          <p>NO QUESTS FOUND</p>
         </div>
       </div>
 
       <footer>
-        <p id="items-left">0 items left</p>
-        <button id="clear-completed">Clear completed</button>
+        <p id="items-left">0 XP LEFT</p>
+        <button id="clear-completed" class="pixel-btn-text">CLEAR DONE</button>
       </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
