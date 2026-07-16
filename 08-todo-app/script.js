@@ -1,4 +1,3 @@
-
 // DOM Elements
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task");
@@ -9,7 +8,7 @@ const emptyState = document.querySelector(".empty-state");
 const dateElement = document.getElementById("date");
 const filters = document.querySelectorAll(".filter");
 const themeToggle = document.getElementById("theme-toggle");
-const paletteToggle = document.getElementById("palette-toggle"); // New Palette button
+const paletteToggle = document.getElementById("palette-toggle");
 
 let todos = [];
 let currentFilter = "all";
@@ -86,7 +85,7 @@ function renderTodos() {
     const todoItem = document.createElement("li");
     todoItem.classList.add("todo-item");
     if (todo.completed) todoItem.classList.add("completed");
-    
+
     // Setup for Drag and Drop Tile
     todoItem.draggable = true;
     todoItem.dataset.id = todo.id;
@@ -133,9 +132,8 @@ todosList.addEventListener("dragover", (e) => {
   const draggingItem = document.querySelector(".dragging");
   if (!draggingItem) return;
 
-  // Use robust math to find exactly which element we are hovering over
   const afterElement = getDragAfterElement(todosList, e.clientY);
-  
+
   if (afterElement == null) {
     todosList.appendChild(draggingItem);
   } else {
@@ -143,49 +141,47 @@ todosList.addEventListener("dragover", (e) => {
   }
 });
 
-// This specific function calculates the exact bounding box centers 
-// to prevent elements from rapidly swapping back and forth (the "gitter").
 function getDragAfterElement(container, y) {
-  const draggableElements = [...container.querySelectorAll('.todo-item:not(.dragging)')];
+  const draggableElements = [...container.querySelectorAll(".todo-item:not(.dragging)")];
 
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
-    
-    if (offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child };
-    } else {
-      return closest;
-    }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
+  return draggableElements.reduce(
+    (closest, child) => {
+      const box = child.getBoundingClientRect();
+      const offset = y - box.top - box.height / 2;
+
+      if (offset < 0 && offset > closest.offset) {
+        return { offset: offset, element: child };
+      } else {
+        return closest;
+      }
+    },
+    { offset: Number.NEGATIVE_INFINITY }
+  ).element;
 }
 
 function handleDragStart(e) {
-  // Use setTimeout to ensure the visual element doesn't disappear before dragging starts
   setTimeout(() => e.target.classList.add("dragging"), 0);
   e.dataTransfer.effectAllowed = "move";
 }
 
 function handleDragEnd(e) {
   e.target.classList.remove("dragging");
-  
+
   // Re-sync the `todos` array based on the new visual DOM order
-  const newOrderIds = [...todosList.querySelectorAll(".todo-item")].map(item => Number(item.dataset.id));
-  
+  const newOrderIds = [...todosList.querySelectorAll(".todo-item")].map((item) => Number(item.dataset.id));
+
   const reorderedTodos = [];
-  newOrderIds.forEach(id => {
-    const foundTodo = todos.find(t => t.id === id);
-    if(foundTodo) reorderedTodos.push(foundTodo);
+  newOrderIds.forEach((id) => {
+    const foundTodo = todos.find((t) => t.id === id);
+    if (foundTodo) reorderedTodos.push(foundTodo);
   });
-  
+
   // Only override if we are in 'all' view
   if (currentFilter === "all" && reorderedTodos.length === todos.length) {
     todos = reorderedTodos;
     saveTodos();
   }
 }
-
-// ----------------------------------
 
 function clearCompleted() {
   todos = todos.filter((todo) => !todo.completed);
@@ -213,8 +209,6 @@ function deleteTodo(id) {
 function loadTodos() {
   const storedTodos = localStorage.getItem("todos");
   if (storedTodos) todos = JSON.parse(storedTodos);
-  
-  // Optional: Save preferred theme state to local storage if desired in future
   renderTodos();
 }
 

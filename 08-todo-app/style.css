@@ -44,17 +44,17 @@ body.light-mode {
 
 /* REFRESHED CYBER-BLUE & NEON CYAN SYNTHWAVE DARK MODE */
 body.theme-synthwave {
-  --bg-color: #050515; /* Deep midnight cyber-void */
-  --app-bg: #3f37c9; /* High-intensity Deep Royal Blue */
-  --text-main: #ffffff; /* Pure white text for ultimate contrast */
-  --text-muted: #4cc9f0; /* Electric Neon Cyan for descriptions and filters */
-  --border-color: #4cc9f0; /* Electric Neon Cyan laser-grid structural outlines */
-  --accent: #4cc9f0; /* Electric Neon Cyan for quick-glance highlights */
-  --tile-bg: #4361ee; /* Vibrant Electric Blue task rows that pop off the canvas */
-  --tile-hover: #4895ef; /* Luminous Sky Blue hover glow state */
-  --shadow: #02020a; /* Deep solid shadow anchor */
-  --danger: #b5179e; /* Deep Magenta destructive trigger */
-  --success: #4cc9f0; /* Neon cyan checkmark indicators */
+  --bg-color: #050515;
+  --app-bg: #3f37c9;
+  --text-main: #ffffff;
+  --text-muted: #4cc9f0;
+  --border-color: #4cc9f0;
+  --accent: #4cc9f0;
+  --tile-bg: #4361ee;
+  --tile-hover: #4895ef;
+  --shadow: #02020a;
+  --danger: #b5179e;
+  --success: #4cc9f0;
 }
 
 /* Synthwave Light Mode */
@@ -95,9 +95,7 @@ body {
       rgba(0, 0, 0, 0.15)
     );
   background-size: 20px 20px;
-  background-position:
-    0 0,
-    10px 10px;
+  background-position: 0 0, 10px 10px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -153,7 +151,6 @@ header p {
   color: var(--accent);
 }
 
-/* Pixel Button Global Style */
 .pixel-btn {
   background-color: var(--accent);
   color: #fff;
@@ -259,10 +256,12 @@ header p {
 .todos-container::-webkit-scrollbar {
   width: 12px;
 }
+
 .todos-container::-webkit-scrollbar-track {
   background: var(--bg-color);
   border-left: 2px solid var(--border-color);
 }
+
 .todos-container::-webkit-scrollbar-thumb {
   background: var(--accent);
   border: 2px solid var(--border-color);
@@ -276,7 +275,6 @@ header p {
   position: relative;
 }
 
-/* SMOOTH DRAG & DROP TILE EFFECT */
 .todo-item {
   background-color: var(--tile-bg);
   border: 2px solid var(--border-color);
@@ -467,11 +465,4 @@ footer {
   .app {
     border-width: 2px;
   }
-}
-
-body{font-family: "Geist Pixel", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "ELSH" 0;
 }
